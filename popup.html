@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自动点击助手</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+    }
+    h2 {
+      margin: 0 0 15px 0;
+      font-size: 18px;
+      color: #333;
+    }
+    .control-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #666;
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .btn-start {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .btn-start:hover {
+      background-color: #45a049;
+    }
+    .btn-stop {
+      background-color: #f44336;
+      color: white;
+    }
+    .btn-stop:hover {
+      background-color: #da190b;
+    }
+    .status {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      text-align: center;
+    }
+    .status.running {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+    .status.stopped {
+      background-color: #ffebee;
+      color: #c62828;
+    }
+    .info {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border-radius: 4px;
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h2>自动点击助手</h2>
+  
+  <div class="control-group">
+    <label for="inputValue">输入框自动填入的值：</label>
+    <input type="number" id="inputValue" value="1" min="0">
+  </div>
+  
+  <div class="button-group">
+    <button id="startBtn" class="btn-start">开始</button>
+    <button id="stopBtn" class="btn-stop">停止</button>
+  </div>
+  
+  <div id="status" class="status stopped">已停止</div>
+  
+  <div class="stats" style="margin-top: 15px; padding: 10px; background-color: #f5f5f5; border-radius: 4px;">
+    <div style="font-size: 12px; color: #666;">
+      <div>已点击功能点: <strong id="clickedCount">0</strong></div>
+      <div style="margin-top: 5px;">已填充输入框: <strong id="filledCount">0</strong></div>
+    </div>
+  </div>
+  
+  <div class="info">
+    <strong>使用说明：</strong><br>
+    1. 点击"开始"按钮启动自动点击<br>
+    2. 插件会自动点击页面上的按钮、链接等可点击元素<br>
+    3. 遇到输入框会自动填入设定的数字<br>
+    4. 点击"停止"按钮可随时停止
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
+
