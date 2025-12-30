@@ -1,3 +1,14 @@
+## 加载插件
+
+1. 打开 Chrome 浏览器
+2. 访问 `chrome://extensions/`
+3. 开启右上角的"开发者模式"开关
+4. 点击"加载已解压的扩展程序"按钮
+5. 选择 `chrome-extension` 文件夹
+
+## 效果展示
+<img width="1407" height="338" alt="image" src="https://github.com/user-attachments/assets/74b46e05-5c8c-4715-bbcc-1f5eea986cca" />
+
 ## 一、项目概述
 
 本项目开发了一款基于 Chrome Manifest V3 的浏览器扩展，实现了页面元素的自动点击与表单自动填充功能。扩展采用多模块架构设计，通过 Chrome Extensions API 实现模块间通信，支持智能元素识别、自动化交互和动态内容监听等核心功能。
@@ -29,5 +40,4 @@
 3. **功能探索**：自动点击发现页面功能
 4. **回归测试**：批量验证页面交互
 
-## 效果展示
-<img width="1407" height="338" alt="image" src="https://github.com/user-attachments/assets/74b46e05-5c8c-4715-bbcc-1f5eea986cca" />
+
